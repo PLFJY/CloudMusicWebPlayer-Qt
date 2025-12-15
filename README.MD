@@ -29,7 +29,7 @@ make
 
 ---
 
-### 目录结构（示例）
+### 目录结构
 ```
 /project-root
 ├─ main.cpp
@@ -41,31 +41,11 @@ make
 ---
 
 ## 依赖与要求
-- **Qt 5.12+ / Qt 6.x**（需包含 Qt WebEngine 模块：`QtWebEngineWidgets` / `QtWebEngine`）。
+- **Qt 6.x**（需包含 Qt WebEngine 模块：`QtWebEngineWidgets` / `QtWebEngine`）。
 - C++11 或更高。
-- 在 Linux 上打包时需要系统的 Qt WebEngine 运行时库（或静态打包）。
-- 推荐安装 `qmake` 或 `cmake` 用于构建。
+- 在 Linux 上打包时需要系统的 Qt6 WebEngine 运行时库（或静态打包）。
+- 推荐安装 `cmake` 用于构建。
 
----
-
-## 构建与运行
-
-### 使用 CMake（推荐）
-```bash
-mkdir build
-cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build . --config Release
-# 运行
-./cloudmusic-web-player-qt
-```
-
-### 使用 qmake / Qt Creator
-```bash
-qmake
-make
-# 或在 Qt Creator 中打开 .pro 项目并构建运行
-```
 
 ---
 
