@@ -4,8 +4,8 @@ project(NeteaseWebPlayer LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Find Qt modules (include DBus for MPRIS)
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets WebEngineWidgets DBus)
+# Find Qt modules
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets WebEngineWidgets)
 
 # Optional X11/XTest for fallback key injection
 find_package(X11)
@@ -26,7 +26,6 @@ target_link_libraries(NeteaseWebPlayer PRIVATE
         Qt6::Gui
         Qt6::Widgets
         Qt6::WebEngineWidgets
-        Qt6::DBus
 )
 
 # If X11 found, link X11 and Xtst for XTestFakeKeyEvent fallback
